@@ -15,13 +15,18 @@ export default function Favourites() {
   const days = useSelector((state) => state.main.search.days);
   const dispatch = useDispatch();
   let [scrollHeight, setScrollHeight] = useState(portable);
-
-  console.log("render size: " + windowWidth);
+  let [show, setShow] = useState(false);
 
   function resizeFunc() {
     windowWidth = window.innerWidth;
     if (windowWidth > 900) setScrollHeight(portable);
     if (windowWidth < 900) setScrollHeight(laptop);
+  }
+
+  function toggleFavours() {
+    if (windowWidth <= 630) {
+      setShow(!show);
+    }
   }
 
   useEffect(() => {
@@ -34,17 +39,19 @@ export default function Favourites() {
     };
   }, []);
 
-  if (!favourites.length) {
-    return (
-      <div className="favourites">
-        <div className="favourites__title">Избранное</div>
-      </div>
-    );
-  }
   return (
     <div className="favourites">
-      <div className="favourites__title">Избранное</div>
-      <>
+      <div
+        className={
+          windowWidth <= 630 && !show
+            ? "favourites__title favourites__title-hide"
+            : "favourites__title favourites__title-open"
+        }
+        onClick={toggleFavours}
+      >
+        Избранное
+      </div>
+      <div style={{ display: windowWidth <= 630 && !show ? "none" : "" }}>
         <Filter />
         <Scrollbars style={{ height: scrollHeight }}>
           {favourites.map((el, i) => {
@@ -63,7 +70,7 @@ export default function Favourites() {
             );
           })}
         </Scrollbars>
-      </>
+      </div>
     </div>
   );
 }

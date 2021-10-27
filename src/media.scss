@@ -84,6 +84,27 @@
     width: 100%;
     margin-bottom: 10px;
     height: auto;
+    &__title {
+      position: relative;
+    }
+    &__title-hide {
+      &::after {
+        content: url("../src/assets/icons/arrow.svg");
+        transform: rotate(90deg);
+        color: rgb(177, 175, 169);
+        position: absolute;
+        right: 0;
+      }
+    }
+    &__title-open {
+      &::after {
+        content: url("../src/assets/icons/arrow.svg");
+        transform: rotate(-90deg);
+        color: rgb(177, 175, 169);
+        position: absolute;
+        right: -4px;
+      }
+    }
   }
   .carousel {
     margin-bottom: 14px;
@@ -95,6 +116,25 @@
 }
 
 @media (max-width: 450px) {
+  .login {
+      padding: 0 30px;
+    &__form {
+      height: auto;
+    }
+    &__header {
+      line-height: 8px;
+    }
+  }
+
+  .login-section {
+    &__input {
+      padding: 12px;
+      height: 38px;
+    }
+  }
+  .login-section-button {
+    height: 38px;
+  }
   .header__title {
     font-size: 20px;
   }
@@ -142,6 +182,7 @@
       margin-top: 20px;
     }
   }
+
   .hotel .favorite {
     padding-left: 12px;
     padding-right: 8px;

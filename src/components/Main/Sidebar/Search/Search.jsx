@@ -19,7 +19,7 @@ export default function Search() {
   let dispatch = useDispatch();
 
   function clickCalendarDay(e) {
-    console.log(e.getFullYear() + "-" + (e.getMonth() + 1) + "-" + e.getDate())
+    // console.log(e.getFullYear() + "-" + (e.getMonth() + 1) + "-" + e.getDate())
     setDate(e.getFullYear() + "-" + (e.getMonth() + 1) + "-" + e.getDate());
     dispatch(setCalendarShow(false));
   }
