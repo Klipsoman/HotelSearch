@@ -23,7 +23,7 @@ export default function Favourites() {
       <div className="favourites__title">Избранное</div>
       <>
         <Filter />
-        <Scrollbars style={{ height: "266px" }}>
+        <Scrollbars style={{ height: "323px" }}>
           {favourites.map((el, i) => {
             return (
               <Favorite

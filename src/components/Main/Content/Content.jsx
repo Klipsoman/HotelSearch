@@ -19,7 +19,7 @@ export default function Content() {
       <Carousel />
       <ContentFavValue />
 
-      <Scrollbars style={{ height: "435px" }}>
+      <Scrollbars style={{ height: "516px" }}>
         <div className="hotels">
           {!hotels.length
             ? null

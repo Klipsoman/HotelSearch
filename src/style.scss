@@ -227,7 +227,7 @@ button {
 }
 
 .favourites {
-  max-height: 411px;
+  max-height: 468px;
   padding: 20px;
   background: #fff;
   border-radius: 16px;
@@ -411,6 +411,7 @@ button {
 // content
 .content {
   width: 664px;
+  min-height: 902px;
   // height: calc(100vh - 92px - 26px);
   padding: 50px 32px;
   background: #fff;
@@ -449,7 +450,7 @@ button {
     font-weight: 300;
     font-size: 17px;
     line-height: 22px;
-    margin-bottom: 40px;
+    margin-bottom: 21px;
   }
   &__favour-b {
     font-weight: 500;
@@ -478,7 +479,7 @@ button {
 }
 
 .hotel {
-  margin-bottom: 19px;
+  margin-bottom: 4px;
   padding-right: 12px;
   display: flex;
   align-items: center;
