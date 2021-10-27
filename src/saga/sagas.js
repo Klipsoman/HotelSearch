@@ -3,8 +3,6 @@ import { fetchHotels } from "../api/api";
 import { REQ_HOTELS, putHotels } from "../redux/actions";
 import { getDates } from "../helpers/helpers";
 
-
-
 function* workerLoadHotels(action) {
   try {
     let city = action.payload ? action.payload.location : "Москва";

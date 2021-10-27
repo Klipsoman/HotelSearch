@@ -42,6 +42,7 @@ button {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 0 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -171,7 +172,7 @@ button {
 }
 
 .search {
-  height: 410px;
+  // height: 410px;
   padding: 32px;
   background: #fff;
   margin-bottom: 24px;
@@ -207,7 +208,7 @@ button {
     font-size: 16px;
   }
   &__button {
-    margin-top: 32px;
+    margin-top: 35px;
   }
 }
 
@@ -221,7 +222,8 @@ button {
 }
 
 .favourites {
-  max-height: 468px;
+  // height: 468px;
+  // max-height: 468px;
   padding: 20px;
   background: #fff;
   border-radius: 16px;
@@ -288,6 +290,7 @@ button {
     line-height: 22px;
     margin-left: 12px;
     color: #424242;
+    white-space: nowrap;
   }
 }
 
@@ -400,6 +403,9 @@ button {
     right: 10px;
     top: 30%;
   }
+  &-none {
+    display: none;
+  }
 }
 
 // content
@@ -453,7 +459,6 @@ button {
 }
 
 // Slider
-
 .carousel {
   max-height: 164px;
   margin-bottom: 28px;
@@ -498,3 +503,13 @@ button {
     width: 100%;
   }
 }
+
+.show {
+  display: block;
+}
+.none {
+  display: none;
+}
+
+// media
+@import "./media.scss";
