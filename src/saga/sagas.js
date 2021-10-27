@@ -11,6 +11,7 @@ function* workerLoadHotels(action) {
     let checkIn = action.payload ? action.payload.date : getDates().checkIn;
     let checkOut = action.payload ? action.payload.days : getDates().checkOut;
     const data = yield call(fetchHotels, city, checkIn, checkOut);
+    console.log(data)
     yield put(putHotels(data));
   } catch (e) {
     console.log(e);

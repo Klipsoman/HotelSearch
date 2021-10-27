@@ -3,12 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-// html {
-//   overflow-y: scroll;
-// }
 html,
 body {
-  // height: 100%;
+  height: 100%;
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   color: #424242;
@@ -29,7 +26,6 @@ button {
   cursor: pointer;
 }
 .app {
-  // height: 100vh;
   overflow: hidden;
 }
 .container {
@@ -41,7 +37,6 @@ button {
 // Login
 
 .login {
-  // min-height: 100%;
   height: 100vh;
   background: url("./assets/images/background.png");
   background-position: center;
@@ -132,7 +127,6 @@ button {
 
 //page
 .page {
-  // height: 100vh;
   background: #f4f4f4;
   padding-bottom: 26px;
 }
@@ -411,8 +405,7 @@ button {
 // content
 .content {
   width: 664px;
-  min-height: 902px;
-  // height: calc(100vh - 92px - 26px);
+  max-height: 902px;
   padding: 50px 32px;
   background: #fff;
   border-radius: 16px;
@@ -462,12 +455,12 @@ button {
 // Slider
 
 .carousel {
-  height: 150px;
+  max-height: 164px;
   margin-bottom: 28px;
   cursor: pointer;
   &__img {
-    height: 150px;
-    width: 164px;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
     border-radius: 10px;
   }
